@@ -3,7 +3,9 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
+      <h3>
+        В заполненной форме <%= I18n.t :err, count: errors.count %>:
+      </h3>
     </div>
 
     <ul>

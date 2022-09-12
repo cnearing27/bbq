@@ -41,3 +41,6 @@ ru:
     few: "%{count} ошибки"
     many: "%{count} ошибок"
 
+  confirmation:
+    event_delete: "Вы уверены, что хотите удалить событие?"
+
