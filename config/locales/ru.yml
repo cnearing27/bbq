@@ -15,20 +15,29 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+
   controllers:
     events:
       created: "Вы создали новое мероприятие"
       updated: "Вы обновили мероприятие"
       destroyed: "Вы удалили мероприятие :("
+
     users:
       updated: "Вы обновили свой профиль"
+
   lables:
     sign_up: "Регистрация"
     sign_in: "Вход"
     forgot_password: "Забыли пароль?"
     event_new: "Создать событие"
     event_edit: "Редактировать событие"
+
   app:
     name: "шашлыки"
     company: "катя к."
+
+  err:
+    one: "%{count} ошибка"
+    few: "%{count} ошибки"
+    many: "%{count} ошибок"
 
