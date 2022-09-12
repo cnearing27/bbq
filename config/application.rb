@@ -32,6 +32,9 @@ module Bbq
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don"t generate system test files.
+
+    config.i18n.default_locale = :ru
+
     config.generators.system_tests = nil
   end
 end

@@ -1,4 +1,4 @@
-<h2>Регистрация</h2>
+<h2><%= t("lables.sign_up") %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -11,12 +11,12 @@
     </div>
 
     <div class="field form-group">
-      <%= f.label :name, "Имя" %>
+      <%= f.label :name %>
       <%= f.text_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
     </div>
 
     <div class="field form-group">
-      <%= f.label :password, "Пароль" %>
+      <%= f.label :password %>
       <% if @minimum_password_length %>
         <em>(минимум <%= @minimum_password_length %> символов )</em>
       <% end %><br />
@@ -24,7 +24,7 @@
     </div>
 
     <div class="field form-group">
-      <%= f.label :password_confirmation, "Пароль еще раз" %><br />
+      <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control"%>
     </div>
 
