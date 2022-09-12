@@ -25,6 +25,30 @@ ru:
     users:
       updated: "Вы обновили свой профиль"
 
+    comments:
+      created: "Комментарий успешно создан"
+      destroyed: "Комментарий удален"
+      errors:
+        creating: "При добавлении комментария возникла ошибка"
+        deleting: "При удалении комментария возникла ошибка"
+
+    subscriptions:
+      created: "Вы подписаны на это событие"
+      destroyed: "Вы отписались от этого события"
+      errors:
+        create: "Подписка не сработала"
+        destroy: "Отписка не сработала"
+      subscription:
+        destroy_confirm: "Точно хотите отписться от события?"
+
+  comments:
+      comment:
+        destroy_confirm: "Точно удалить этот комментарий?"
+
+  subscriptions:
+      subscription:
+        destroy_confirm: "Точно хотите отписться от события?"
+
   lables:
     sign_up: "Регистрация"
     sign_in: "Вход"
