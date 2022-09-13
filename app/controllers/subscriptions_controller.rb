@@ -1,14 +1,11 @@
 class SubscriptionsController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
-
   before_action :set_subscription, only: [:destroy]
 
-  def create
-    if current_user == @event.user
-      redirect_to @event, alert: I18n.t("controllers.subscriptions.errors.owner")
-      return
-    end
+  before_action :is_owner, only: [:create]
+  before_action :email_registered, only: [:create]
 
+  def create
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 
@@ -42,5 +39,17 @@ class SubscriptionsController < ApplicationController
 
   def subscription_params
     params.fetch(:subscription, {}).permit(:user_email, :user_name)
+  end
+
+  def is_owner
+    if current_user == @event.user
+      redirect_to @event, alert: I18n.t("controllers.subscriptions.errors.owner")
+    end
+  end
+
+  def email_registered
+    if User.find_by(email: subscription_params[:user_email]).present?
+      redirect_to @event, alert: I18n.t("controllers.subscriptions.errors.email_registered")
+    end
   end
 end
