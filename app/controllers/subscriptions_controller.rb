@@ -4,6 +4,11 @@ class SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:destroy]
 
   def create
+    if current_user == @event.user
+      redirect_to @event, alert: I18n.t("controllers.subscriptions.errors.owner")
+      return
+    end
+
     @new_subscription = @event.subscriptions.build(subscription_params)
     @new_subscription.user = current_user
 

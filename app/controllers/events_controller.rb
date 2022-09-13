@@ -39,7 +39,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-      redirect_to @event, notice: I18n.t("controllers.events.destroyed")
+    redirect_to @event, notice: I18n.t("controllers.events.destroyed")
   end
 
   private
