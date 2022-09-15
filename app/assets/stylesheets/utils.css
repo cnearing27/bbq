@@ -35,3 +35,13 @@
 .thumbnail-inner {
 	padding: 20px 4px 4px;
 }
+
+.hashtags {
+	background-color: lightblue;
+	border-radius: 3%;
+}
+
+.registration-label {
+	float: left;
+	margin-right: 3px;
+}
