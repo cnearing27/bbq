@@ -3,11 +3,13 @@ ru:
     models:
       user: "Пользователь"
       event: "Событие"
+      photo: "Фотография"
 
     attributes:
       user:
         email: "Email"
         name: "Имя"
+        avatar: "Аватарка"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
       event:
@@ -15,6 +17,8 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      photo:
+        photo: "Фотография"
 
   controllers:
     events:
@@ -42,6 +46,11 @@ ru:
         email_registered: "Пользователь с указанным e-mail существует, войдите в аккаунт, чтобы подписаться на событие"
       subscription:
         destroy_confirm: "Точно хотите отписться от события?"
+
+    photos:
+      error: "С фото что-то не так"
+      created: "Вы добавили фотографию к событию"
+      destroyed: "Вы удалили фото"
 
   comments:
       comment:

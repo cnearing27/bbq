@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
 
   resources :events do
+    resources :photos, only: [:create, :destroy]
+
     resources :comments, only: [:create, :destroy]
 
     resources :subscriptions, only: [:create, :destroy]
