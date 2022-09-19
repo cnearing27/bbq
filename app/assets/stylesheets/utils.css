@@ -1,42 +1,42 @@
 .buffer-top {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .buffer-bottom {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .buffer-both {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .img-icon, .img-icon-small {
-	height: 50px;
-	width: auto;
-	border-radius: 50%;
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
 }
 
 .thumbnail {
-	position: relative;
-	background: transparent;
-	padding: 0;
-	overflow: hidden;
-	border-radius: 5px;
+  position: relative;
+  background: transparent;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
 .thumbnail h3 {
-	white-space: nowrap;
-	overflow: hidden;
-	margin-top: 0;
-	margin-bottom: .3em;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: .3em;
 }
 
 .thumbnail-inner {
-	padding: 20px 4px 4px;
+  padding: 20px 4px 4px;
 }
 
 .registration-label {
-	float: left;
-	margin-right: 3px;
+  float: left;
+  margin-right: 3px;
 }
