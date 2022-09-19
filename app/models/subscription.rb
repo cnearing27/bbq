@@ -4,14 +4,17 @@ class Subscription < ApplicationRecord
 
   validates :event, presence: true
 
-  validates :user, uniqueness: { scope: :event_id }, if: -> { user.present? }
-  validates :user_email, uniqueness: { scope: :event_id }, presence: true,
-    format: { with: URI::MailTo::EMAIL_REGEXP }, unless: -> { user.present? }
+  with_options if: -> { user.present? } do
+    validates :user, uniqueness: { scope: :event_id }
+    validate :is_owner
+  end
 
-  validates :user_name, presence: true, unless: -> { user.present? }
-
-  validate :email_registered, unless: -> { user.present? }
-  validate :is_owner, if: -> { user.present? }
+  with_options unless: -> { user.present? } do
+    validates :user_email, uniqueness: { scope: :event_id },
+      presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
+    validates :user_name, presence: true
+    validate :email_registered
+  end
 
   def user_name
     if user.present?
@@ -33,13 +36,13 @@ class Subscription < ApplicationRecord
 
   def is_owner
     if user == event.user
-      errors.add(:user, I18n.t("controllers.subscriptions.errors.owner"))
+      errors.add(:user, :owner)
     end
   end
 
   def email_registered
     if User.find_by(email: user_email).present?
-      errors.add(:user_email, I18n.t("controllers.subscriptions.errors.email_registered"))
+      errors.add(:user_email, :email_registered)
     end
   end
 end
