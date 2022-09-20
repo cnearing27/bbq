@@ -33,7 +33,6 @@
     </div>
   </div>
 
-
   <div class="row">
     <div class="col-md-8">
       <div class="event-photo-form">
@@ -58,10 +57,14 @@
     </div>
 
     <div class="col-md-4">
+      <%= javascript_include_tag "map" %>
+      <div id="map" data-address="<%= @event.address %>" class="map"></div>
+
       <div class="event-owner">
         <h4>Зовет:</h4>
           <p><%= render partial: "users/user", object: @event.user %></p>
       </div>
+
       <div class="event-subscriptions">
         <% if @event.subscriptions.except(@new_subscription).any? %>
           <h4>Пойдут:</h4>
