@@ -11,5 +11,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
 
     resources :subscriptions, only: [:create, :destroy]
+
+    post :show, on: :member
   end
 end
