@@ -47,7 +47,7 @@ class PhotosController < ApplicationController
     all_emails.delete(current_user.email)
 
     all_emails.each do |mail|
-      EventMailer.photo(event, photo, mail).deliver_now
+      EventMailer.photo(event, photo, mail, request.base_url).deliver_now
     end
   end
 end
