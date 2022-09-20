@@ -6,6 +6,6 @@
 <%= t ".author" %>: <%= @comment.user_name %>
 
 --------------------------------
-<%= t ".event" %>: <%= @event.title %>
+<%= t ".event" %>: <%= @event.title %> (https://bbq2-cnearing.herokuapp.com/events/<%= @event.id %>)
 <%= t ".datetime" %>: <%= l @event.datetime %>
 <%= t ".owner" %>: <%= @event.user.name %>

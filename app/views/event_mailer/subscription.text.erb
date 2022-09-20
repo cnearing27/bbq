@@ -6,6 +6,6 @@ Email: <%=  @email %>
 
 ----------------------
 
-Событие: <%= @event.title %>
+Событие: <%= @event.title %> (https://bbq2-cnearing.herokuapp.com/events/<%= @event.id %>)
 Состоится: <%= l @event.datetime %>
 Организатор: <%= @event.user.name %>
