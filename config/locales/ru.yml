@@ -73,6 +73,8 @@ ru:
     forgot_password: "Забыли пароль?"
     event_new: "Создать событие"
     event_edit: "Редактировать событие"
+    change_password: "Смена пароля"
+    to_change_password: "Сменить пароль"
 
   app:
     name: "шашлыки"
