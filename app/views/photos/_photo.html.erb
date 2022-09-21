@@ -1,5 +1,5 @@
 <div class="col-md-3 img-wrap">
-  <% options = "Добавил #{link_to photo.user.name, photo.user} " %>
+  <% options = "#{t("lightbox.label")} #{link_to photo.user.name, photo.user} " %>
   <% if photo.user == current_user || photo.event.user == current_user %>
     <% options << "#{link_to fa_icon("trash"),
       event_photo_path(photo.event, photo), method: :delete, data: { confirm: t("confirmation.photo_delete") }}" %>

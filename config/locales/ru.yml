@@ -116,3 +116,6 @@ ru:
   event:
     pincode: "Код доступа"
 
+  lightbox:
+    label: "Добавил"
+
