@@ -1,0 +1,100 @@
+2022-09-21T03:12:10.489257+00:00 app[web.1]: F, [2022-09-21T03:12:10.489222 #4] FATAL -- : [cc01baef-8e89-40e6-9777-4f2cc75b2de4]
+2022-09-21T03:12:10.489257+00:00 app[web.1]: [cc01baef-8e89-40e6-9777-4f2cc75b2de4] ActionController::RoutingError (No route matches [GET] "/images/next.png"):
+2022-09-21T03:12:10.489258+00:00 app[web.1]: [cc01baef-8e89-40e6-9777-4f2cc75b2de4]
+2022-09-21T03:12:10.490580+00:00 heroku[router]: at=info method=GET path="/images/prev.png" host=bbq2-cnearing.herokuapp.com request_id=e390579a-ad33-4e4e-9a22-8687e5bb15e9 fwd="89.179.107.227" dyno=web.1 connect=0ms service=6ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:10.491055+00:00 heroku[router]: at=info method=GET path="/images/next.png" host=bbq2-cnearing.herokuapp.com request_id=cc01baef-8e89-40e6-9777-4f2cc75b2de4 fwd="89.179.107.227" dyno=web.1 connect=0ms service=4ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:10.557012+00:00 app[web.1]: I, [2022-09-21T03:12:10.556929 #4]  INFO -- : [2cf4ff5c-8111-49d2-87a7-bed233d1bb10] Started GET "/images/close.png" for 89.179.107.227 at 2022-09-21 03:12:10 +0000
+2022-09-21T03:12:10.557548+00:00 app[web.1]: F, [2022-09-21T03:12:10.557504 #4] FATAL -- : [2cf4ff5c-8111-49d2-87a7-bed233d1bb10]
+2022-09-21T03:12:10.557549+00:00 app[web.1]: [2cf4ff5c-8111-49d2-87a7-bed233d1bb10] ActionController::RoutingError (No route matches [GET] "/images/close.png"):
+2022-09-21T03:12:10.557549+00:00 app[web.1]: [2cf4ff5c-8111-49d2-87a7-bed233d1bb10]
+2022-09-21T03:12:10.560289+00:00 heroku[router]: at=info method=GET path="/images/close.png" host=bbq2-cnearing.herokuapp.com request_id=2cf4ff5c-8111-49d2-87a7-bed233d1bb10 fwd="89.179.107.227" dyno=web.1 connect=0ms service=2ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:21.563322+00:00 app[web.1]: I, [2022-09-21T03:12:21.563253 #4]  INFO -- : [e413ee37-bff7-481d-a140-5c4d06c42054] Started DELETE "/events/1/photos/6" for 89.179.107.227 at 2022-09-21 03:12:21 +0000
+2022-09-21T03:12:21.564150+00:00 app[web.1]: I, [2022-09-21T03:12:21.564087 #4]  INFO -- : [e413ee37-bff7-481d-a140-5c4d06c42054] Processing by PhotosController#destroy as HTML
+2022-09-21T03:12:21.564198+00:00 app[web.1]: I, [2022-09-21T03:12:21.564158 #4]  INFO -- : [e413ee37-bff7-481d-a140-5c4d06c42054]   Parameters: {"authenticity_token"=>"[FILTERED]", "event_id"=>"1", "id"=>"6"}
+2022-09-21T03:12:21.586484+00:00 app[web.1]: I, [2022-09-21T03:12:21.586404 #4]  INFO -- : [e413ee37-bff7-481d-a140-5c4d06c42054] Redirected to https://bbq2-cnearing.herokuapp.com/events/1
+2022-09-21T03:12:21.586570+00:00 app[web.1]: I, [2022-09-21T03:12:21.586543 #4]  INFO -- : [e413ee37-bff7-481d-a140-5c4d06c42054] Completed 302 Found in 22ms (ActiveRecord: 14.4ms | Allocations: 1556)
+2022-09-21T03:12:21.587144+00:00 heroku[router]: at=info method=POST path="/events/1/photos/6" host=bbq2-cnearing.herokuapp.com request_id=e413ee37-bff7-481d-a140-5c4d06c42054 fwd="89.179.107.227" dyno=web.1 connect=0ms service=26ms status=302 bytes=1251 protocol=https
+2022-09-21T03:12:21.725614+00:00 app[web.1]: I, [2022-09-21T03:12:21.725512 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909] Started GET "/events/1" for 89.179.107.227 at 2022-09-21 03:12:21 +0000
+2022-09-21T03:12:21.726999+00:00 app[web.1]: I, [2022-09-21T03:12:21.726917 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909] Processing by EventsController#show as HTML
+2022-09-21T03:12:21.727033+00:00 app[web.1]: I, [2022-09-21T03:12:21.727000 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909]   Parameters: {"id"=>"1"}
+2022-09-21T03:12:21.751472+00:00 app[web.1]: I, [2022-09-21T03:12:21.751401 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909]   Rendered events/show.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2836)
+2022-09-21T03:12:21.752506+00:00 app[web.1]: I, [2022-09-21T03:12:21.752433 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909]   Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3689)
+2022-09-21T03:12:21.752672+00:00 app[web.1]: I, [2022-09-21T03:12:21.752632 #4]  INFO -- : [129a7988-7f0a-47a0-bbfc-8c8d4e07d909] Completed 200 OK in 26ms (Views: 8.0ms | ActiveRecord: 12.0ms | Allocations: 5190)
+2022-09-21T03:12:21.753237+00:00 heroku[router]: at=info method=GET path="/events/1" host=bbq2-cnearing.herokuapp.com request_id=129a7988-7f0a-47a0-bbfc-8c8d4e07d909 fwd="89.179.107.227" dyno=web.1 connect=0ms service=30ms status=200 bytes=8725 protocol=https
+2022-09-21T03:12:21.912343+00:00 heroku[router]: at=info method=GET path="/assets/application-f99c227b391ecb79b254c925f51ac363a95be4f1b5cc7e67f97661f6cf894bda.css" host=bbq2-cnearing.herokuapp.com request_id=51659bf8-78c8-4a16-8677-6106699e49ba fwd="89.179.107.227" dyno=web.1 connect=0ms service=1ms status=304 bytes=48 protocol=https
+2022-09-21T03:12:21.924871+00:00 heroku[router]: at=info method=GET path="/assets/application-4d9d57d69765445719bb645427bb4e988e1a345bda2fcbcb17212a035f863ac2.js" host=bbq2-cnearing.herokuapp.com request_id=da70885c-b6e2-4b00-a911-edff059de8f4 fwd="89.179.107.227" dyno=web.1 connect=0ms service=3ms status=304 bytes=48 protocol=https
+2022-09-21T03:12:22.117024+00:00 app[web.1]: I, [2022-09-21T03:12:22.116940 #4]  INFO -- : [e4454538-0d09-47ab-b8f4-fdf11a4e6e00] Started GET "/images/prev.png" for 89.179.107.227 at 2022-09-21 03:12:22 +0000
+2022-09-21T03:12:22.117736+00:00 app[web.1]: F, [2022-09-21T03:12:22.117670 #4] FATAL -- : [e4454538-0d09-47ab-b8f4-fdf11a4e6e00]
+2022-09-21T03:12:22.117738+00:00 app[web.1]: [e4454538-0d09-47ab-b8f4-fdf11a4e6e00] ActionController::RoutingError (No route matches [GET] "/images/prev.png"):
+2022-09-21T03:12:22.117739+00:00 app[web.1]: [e4454538-0d09-47ab-b8f4-fdf11a4e6e00]
+2022-09-21T03:12:22.119164+00:00 app[web.1]: I, [2022-09-21T03:12:22.119117 #4]  INFO -- : [9ad3ebf8-59b2-4dbb-9d70-eae997419423] Started GET "/images/close.png" for 89.179.107.227 at 2022-09-21 03:12:22 +0000
+2022-09-21T03:12:22.119690+00:00 app[web.1]: F, [2022-09-21T03:12:22.119651 #4] FATAL -- : [9ad3ebf8-59b2-4dbb-9d70-eae997419423]
+2022-09-21T03:12:22.119691+00:00 app[web.1]: [9ad3ebf8-59b2-4dbb-9d70-eae997419423] ActionController::RoutingError (No route matches [GET] "/images/close.png"):
+2022-09-21T03:12:22.119691+00:00 app[web.1]: [9ad3ebf8-59b2-4dbb-9d70-eae997419423]
+2022-09-21T03:12:22.121499+00:00 heroku[router]: at=info method=GET path="/images/close.png" host=bbq2-cnearing.herokuapp.com request_id=9ad3ebf8-59b2-4dbb-9d70-eae997419423 fwd="89.179.107.227" dyno=web.1 connect=0ms service=3ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:22.122568+00:00 app[web.1]: I, [2022-09-21T03:12:22.122507 #4]  INFO -- : [2fb7546e-e694-424c-84c9-805e188ee350] Started GET "/images/loading.gif" for 89.179.107.227 at 2022-09-21 03:12:22 +0000
+2022-09-21T03:12:22.122849+00:00 heroku[router]: at=info method=GET path="/images/prev.png" host=bbq2-cnearing.herokuapp.com request_id=e4454538-0d09-47ab-b8f4-fdf11a4e6e00 fwd="89.179.107.227" dyno=web.1 connect=0ms service=5ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:22.123371+00:00 app[web.1]: F, [2022-09-21T03:12:22.123318 #4] FATAL -- : [2fb7546e-e694-424c-84c9-805e188ee350]
+2022-09-21T03:12:22.123371+00:00 app[web.1]: [2fb7546e-e694-424c-84c9-805e188ee350] ActionController::RoutingError (No route matches [GET] "/images/loading.gif"):
+2022-09-21T03:12:22.123372+00:00 app[web.1]: [2fb7546e-e694-424c-84c9-805e188ee350]
+2022-09-21T03:12:22.123929+00:00 app[web.1]: I, [2022-09-21T03:12:22.123670 #4]  INFO -- : [600d1b3d-3f19-45e1-9e4e-308b38870d9a] Started GET "/images/next.png" for 89.179.107.227 at 2022-09-21 03:12:22 +0000
+2022-09-21T03:12:22.124341+00:00 app[web.1]: F, [2022-09-21T03:12:22.124296 #4] FATAL -- : [600d1b3d-3f19-45e1-9e4e-308b38870d9a]
+2022-09-21T03:12:22.124342+00:00 app[web.1]: [600d1b3d-3f19-45e1-9e4e-308b38870d9a] ActionController::RoutingError (No route matches [GET] "/images/next.png"):
+2022-09-21T03:12:22.124342+00:00 app[web.1]: [600d1b3d-3f19-45e1-9e4e-308b38870d9a]
+2022-09-21T03:12:22.124350+00:00 heroku[router]: at=info method=GET path="/images/next.png" host=bbq2-cnearing.herokuapp.com request_id=600d1b3d-3f19-45e1-9e4e-308b38870d9a fwd="89.179.107.227" dyno=web.1 connect=0ms service=9ms status=404 bytes=1902 protocol=https
+2022-09-21T03:12:22.125549+00:00 heroku[router]: at=info method=GET path="/images/loading.gif" host=bbq2-cnearing.herokuapp.com request_id=2fb7546e-e694-424c-84c9-805e188ee350 fwd="89.179.107.227" dyno=web.1 connect=0ms service=7ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:45.650444+00:00 app[web.1]: I, [2022-09-21T03:17:45.650370 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6] Started GET "/events/1" for 89.179.107.227 at 2022-09-21 03:17:45 +0000
+2022-09-21T03:17:45.651203+00:00 app[web.1]: I, [2022-09-21T03:17:45.651151 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6] Processing by EventsController#show as HTML
+2022-09-21T03:17:45.651231+00:00 app[web.1]: I, [2022-09-21T03:17:45.651206 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6]   Parameters: {"id"=>"1"}
+2022-09-21T03:17:45.764148+00:00 app[web.1]: I, [2022-09-21T03:17:45.764064 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6]   Rendered events/show.html.erb within layouts/application (Duration: 23.1ms | Allocations: 2859)
+2022-09-21T03:17:45.765486+00:00 app[web.1]: I, [2022-09-21T03:17:45.765425 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6]   Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 3634)
+2022-09-21T03:17:45.765719+00:00 app[web.1]: I, [2022-09-21T03:17:45.765679 #4]  INFO -- : [07b1dffd-3630-493b-8340-b1e8ec25d2e6] Completed 200 OK in 114ms (Views: 13.7ms | ActiveRecord: 50.6ms | Allocations: 8057)
+2022-09-21T03:17:45.768318+00:00 heroku[router]: at=info method=GET path="/events/1" host=bbq2-cnearing.herokuapp.com request_id=07b1dffd-3630-493b-8340-b1e8ec25d2e6 fwd="89.179.107.227" dyno=web.1 connect=0ms service=119ms status=200 bytes=8570 protocol=https
+2022-09-21T03:17:45.921913+00:00 heroku[router]: at=info method=GET path="/assets/application-f99c227b391ecb79b254c925f51ac363a95be4f1b5cc7e67f97661f6cf894bda.css" host=bbq2-cnearing.herokuapp.com request_id=ff3182a3-7c9f-4407-8567-83d97c92df42 fwd="89.179.107.227" dyno=web.1 connect=0ms service=2ms status=304 bytes=48 protocol=https
+2022-09-21T03:17:45.922009+00:00 heroku[router]: at=info method=GET path="/assets/application-4d9d57d69765445719bb645427bb4e988e1a345bda2fcbcb17212a035f863ac2.js" host=bbq2-cnearing.herokuapp.com request_id=bd5da299-bde7-4614-bded-7e5534fcd672 fwd="89.179.107.227" dyno=web.1 connect=0ms service=2ms status=304 bytes=48 protocol=https
+2022-09-21T03:17:46.201816+00:00 app[web.1]: I, [2022-09-21T03:17:46.201736 #4]  INFO -- : [b669fba3-6b59-4c7e-8355-d78d31f06a7a] Started GET "/images/prev.png" for 89.179.107.227 at 2022-09-21 03:17:46 +0000
+2022-09-21T03:17:46.202370+00:00 app[web.1]: F, [2022-09-21T03:17:46.202311 #4] FATAL -- : [b669fba3-6b59-4c7e-8355-d78d31f06a7a]
+2022-09-21T03:17:46.202371+00:00 app[web.1]: [b669fba3-6b59-4c7e-8355-d78d31f06a7a] ActionController::RoutingError (No route matches [GET] "/images/prev.png"):
+2022-09-21T03:17:46.202372+00:00 app[web.1]: [b669fba3-6b59-4c7e-8355-d78d31f06a7a]
+2022-09-21T03:17:46.203808+00:00 heroku[router]: at=info method=GET path="/images/prev.png" host=bbq2-cnearing.herokuapp.com request_id=b669fba3-6b59-4c7e-8355-d78d31f06a7a fwd="89.179.107.227" dyno=web.1 connect=0ms service=4ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:46.210213+00:00 app[web.1]: I, [2022-09-21T03:17:46.210149 #4]  INFO -- : [d161f3e7-ae79-4f8e-89bd-c15f57ead1a6] Started GET "/images/next.png" for 89.179.107.227 at 2022-09-21 03:17:46 +0000
+2022-09-21T03:17:46.211331+00:00 app[web.1]: F, [2022-09-21T03:17:46.211268 #4] FATAL -- : [d161f3e7-ae79-4f8e-89bd-c15f57ead1a6]
+2022-09-21T03:17:46.211332+00:00 app[web.1]: [d161f3e7-ae79-4f8e-89bd-c15f57ead1a6] ActionController::RoutingError (No route matches [GET] "/images/next.png"):
+2022-09-21T03:17:46.211333+00:00 app[web.1]: [d161f3e7-ae79-4f8e-89bd-c15f57ead1a6]
+2022-09-21T03:17:46.213477+00:00 heroku[router]: at=info method=GET path="/images/next.png" host=bbq2-cnearing.herokuapp.com request_id=d161f3e7-ae79-4f8e-89bd-c15f57ead1a6 fwd="89.179.107.227" dyno=web.1 connect=0ms service=5ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:46.347575+00:00 app[web.1]: I, [2022-09-21T03:17:46.347476 #4]  INFO -- : [97d374c8-3a21-4040-9cd4-30e7a5a75822] Started GET "/images/loading.gif" for 89.179.107.227 at 2022-09-21 03:17:46 +0000
+2022-09-21T03:17:46.348136+00:00 app[web.1]: F, [2022-09-21T03:17:46.348068 #4] FATAL -- : [97d374c8-3a21-4040-9cd4-30e7a5a75822]
+2022-09-21T03:17:46.348137+00:00 app[web.1]: [97d374c8-3a21-4040-9cd4-30e7a5a75822] ActionController::RoutingError (No route matches [GET] "/images/loading.gif"):
+2022-09-21T03:17:46.348138+00:00 app[web.1]: [97d374c8-3a21-4040-9cd4-30e7a5a75822]
+2022-09-21T03:17:46.349326+00:00 app[web.1]: I, [2022-09-21T03:17:46.349269 #4]  INFO -- : [67eaa3cc-248e-4eb6-9460-62189aed82da] Started GET "/images/close.png" for 89.179.107.227 at 2022-09-21 03:17:46 +0000
+2022-09-21T03:17:46.349538+00:00 heroku[router]: at=info method=GET path="/images/loading.gif" host=bbq2-cnearing.herokuapp.com request_id=97d374c8-3a21-4040-9cd4-30e7a5a75822 fwd="89.179.107.227" dyno=web.1 connect=0ms service=5ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:46.349911+00:00 app[web.1]: F, [2022-09-21T03:17:46.349853 #4] FATAL -- : [67eaa3cc-248e-4eb6-9460-62189aed82da]
+2022-09-21T03:17:46.349912+00:00 app[web.1]: [67eaa3cc-248e-4eb6-9460-62189aed82da] ActionController::RoutingError (No route matches [GET] "/images/close.png"):
+2022-09-21T03:17:46.349912+00:00 app[web.1]: [67eaa3cc-248e-4eb6-9460-62189aed82da]
+2022-09-21T03:17:46.351748+00:00 heroku[router]: at=info method=GET path="/images/close.png" host=bbq2-cnearing.herokuapp.com request_id=67eaa3cc-248e-4eb6-9460-62189aed82da fwd="89.179.107.227" dyno=web.1 connect=0ms service=5ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:48.963669+00:00 app[web.1]: I, [2022-09-21T03:17:48.963568 #4]  INFO -- : [207cd5b3-43b7-4b88-ad7d-781866dce399] Started GET "/" for 89.179.107.227 at 2022-09-21 03:17:48 +0000
+2022-09-21T03:17:48.966037+00:00 app[web.1]: I, [2022-09-21T03:17:48.965903 #4]  INFO -- : [207cd5b3-43b7-4b88-ad7d-781866dce399] Processing by EventsController#index as HTML
+2022-09-21T03:17:48.982880+00:00 app[web.1]: I, [2022-09-21T03:17:48.982800 #4]  INFO -- : [207cd5b3-43b7-4b88-ad7d-781866dce399]   Rendered events/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1276)
+2022-09-21T03:17:48.986583+00:00 app[web.1]: I, [2022-09-21T03:17:48.986525 #4]  INFO -- : [207cd5b3-43b7-4b88-ad7d-781866dce399]   Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 2452)
+2022-09-21T03:17:48.986842+00:00 app[web.1]: I, [2022-09-21T03:17:48.986789 #4]  INFO -- : [207cd5b3-43b7-4b88-ad7d-781866dce399] Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 7.5ms | Allocations: 2671)
+2022-09-21T03:17:48.989024+00:00 heroku[router]: at=info method=GET path="/" host=bbq2-cnearing.herokuapp.com request_id=207cd5b3-43b7-4b88-ad7d-781866dce399 fwd="89.179.107.227" dyno=web.1 connect=0ms service=26ms status=200 bytes=5302 protocol=https
+2022-09-21T03:17:49.321639+00:00 app[web.1]: I, [2022-09-21T03:17:49.321540 #4]  INFO -- : [b7fd847a-9a38-47eb-9bf0-7c8b2e319a20] Started GET "/images/prev.png" for 89.179.107.227 at 2022-09-21 03:17:49 +0000
+2022-09-21T03:17:49.322608+00:00 app[web.1]: F, [2022-09-21T03:17:49.322528 #4] FATAL -- : [b7fd847a-9a38-47eb-9bf0-7c8b2e319a20]
+2022-09-21T03:17:49.322610+00:00 app[web.1]: [b7fd847a-9a38-47eb-9bf0-7c8b2e319a20] ActionController::RoutingError (No route matches [GET] "/images/prev.png"):
+2022-09-21T03:17:49.322611+00:00 app[web.1]: [b7fd847a-9a38-47eb-9bf0-7c8b2e319a20]
+2022-09-21T03:17:49.324051+00:00 heroku[router]: at=info method=GET path="/images/prev.png" host=bbq2-cnearing.herokuapp.com request_id=b7fd847a-9a38-47eb-9bf0-7c8b2e319a20 fwd="89.179.107.227" dyno=web.1 connect=0ms service=3ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:49.324424+00:00 app[web.1]: I, [2022-09-21T03:17:49.324356 #4]  INFO -- : [17b5d121-f289-4266-9d00-42cc607115e6] Started GET "/images/loading.gif" for 89.179.107.227 at 2022-09-21 03:17:49 +0000
+2022-09-21T03:17:49.325474+00:00 app[web.1]: I, [2022-09-21T03:17:49.325421 #4]  INFO -- : [e9c92e57-3a12-4565-9874-812e7e75a6cd] Started GET "/images/close.png" for 89.179.107.227 at 2022-09-21 03:17:49 +0000
+2022-09-21T03:17:49.326011+00:00 app[web.1]: F, [2022-09-21T03:17:49.325966 #4] FATAL -- : [e9c92e57-3a12-4565-9874-812e7e75a6cd]
+2022-09-21T03:17:49.326012+00:00 app[web.1]: [e9c92e57-3a12-4565-9874-812e7e75a6cd] ActionController::RoutingError (No route matches [GET] "/images/close.png"):
+2022-09-21T03:17:49.326012+00:00 app[web.1]: [e9c92e57-3a12-4565-9874-812e7e75a6cd]
+2022-09-21T03:17:49.327160+00:00 app[web.1]: F, [2022-09-21T03:17:49.327107 #4] FATAL -- : [17b5d121-f289-4266-9d00-42cc607115e6]
+2022-09-21T03:17:49.327161+00:00 app[web.1]: [17b5d121-f289-4266-9d00-42cc607115e6] ActionController::RoutingError (No route matches [GET] "/images/loading.gif"):
+2022-09-21T03:17:49.327162+00:00 app[web.1]: [17b5d121-f289-4266-9d00-42cc607115e6]
+2022-09-21T03:17:49.327265+00:00 heroku[router]: at=info method=GET path="/images/close.png" host=bbq2-cnearing.herokuapp.com request_id=e9c92e57-3a12-4565-9874-812e7e75a6cd fwd="89.179.107.227" dyno=web.1 connect=0ms service=4ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:49.328284+00:00 app[web.1]: I, [2022-09-21T03:17:49.328237 #4]  INFO -- : [a3d22a00-296c-4de4-82c8-6c191dec5c6b] Started GET "/images/next.png" for 89.179.107.227 at 2022-09-21 03:17:49 +0000
+2022-09-21T03:17:49.328493+00:00 heroku[router]: at=info method=GET path="/images/loading.gif" host=bbq2-cnearing.herokuapp.com request_id=17b5d121-f289-4266-9d00-42cc607115e6 fwd="89.179.107.227" dyno=web.1 connect=0ms service=6ms status=404 bytes=1902 protocol=https
+2022-09-21T03:17:49.328786+00:00 app[web.1]: F, [2022-09-21T03:17:49.328743 #4] FATAL -- : [a3d22a00-296c-4de4-82c8-6c191dec5c6b]
+2022-09-21T03:17:49.328787+00:00 app[web.1]: [a3d22a00-296c-4de4-82c8-6c191dec5c6b] ActionController::RoutingError (No route matches [GET] "/images/next.png"):
+2022-09-21T03:17:49.328788+00:00 app[web.1]: [a3d22a00-296c-4de4-82c8-6c191dec5c6b]
+2022-09-21T03:17:49.330551+00:00 heroku[router]: at=info method=GET path="/images/next.png" host=bbq2-cnearing.herokuapp.com request_id=a3d22a00-296c-4de4-82c8-6c191dec5c6b fwd="89.179.107.227" dyno=web.1 connect=0ms service=9ms status=404 bytes=1902 protocol=https
