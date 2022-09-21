@@ -39,7 +39,7 @@
         <%= render partial: "photos/form", locals: {photo: @new_photo || @event.photos.build} %>
       </div>
 
-      <div class="event-photos">
+      <div class="event-photos row buffer-both">
         <div class="event-photos-gallery">
           <%= render partial: "photos/photo", collection: @event.photos.except(@new_photo) %>
         </div>

@@ -88,6 +88,7 @@ ru:
 
   confirmation:
     event_delete: "Вы уверены, что хотите удалить событие?"
+    photo_delete: "Вы уверены, что хотите удалить эту фотографию?"
 
   event_mailer:
     comment:

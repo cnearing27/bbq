@@ -1,5 +1,9 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.thumb.url), photo.photo.url %>
-
-  Добавил <%= render partial: "users/user", object: photo.user %>
+<div class="col-md-3 img-wrap">
+  <% options = "Добавил #{link_to photo.user.name, photo.user} " %>
+  <% if photo.user == current_user || photo.event.user == current_user %>
+    <% options << "#{link_to fa_icon("trash"),
+      event_photo_path(photo.event, photo), method: :delete, data: { confirm: t("confirmation.photo_delete") }}" %>
+  <% end %>
+  <a href="<%= photo.photo.url %>" data-lightbox="lbox" data-title="<%= options %>">
+    <img src="<%= photo.photo.thumb.url %>"></a>
 </div>
