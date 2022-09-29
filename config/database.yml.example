@@ -1,0 +1,5 @@
+production:
+  adapter: postgresql
+  user: your_database_username
+  password: your_password
+  database: database_name
