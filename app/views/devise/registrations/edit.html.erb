@@ -1,0 +1,40 @@
+<h2 class="mb-3"><%= t("lables.change_password") %></h2>
+
+<div class="col-md-6">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field form-group">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label "Новый пароль", class: "registration-label" %>
+      <% if @minimum_password_length %>
+        <em>(минимум <%= @minimum_password_length %> символов)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="field form-group">
+      <%= f.label :current_password %> <i>(введите, чтобы применить изменения)</i>
+      <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Сменить пароль", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= link_to "Назад", :back %>
+
+  <h3>Разочарованы?</h3>
+  <%= button_to "Удалить учетную запись", registration_path(resource_name),
+    data: { confirm: "Вы уверены?" }, method: :delete, class: "btn btn-danger" %></p>
+</div>
