@@ -119,3 +119,6 @@ ru:
   lightbox:
     label: "Добавил"
 
+  pundit:
+    not_authorized: "Данное действие недоступно для Вас"
+

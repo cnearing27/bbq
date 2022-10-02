@@ -14,6 +14,7 @@ gem "importmap-rails"
 gem "jbuilder"
 gem "jquery-rails"
 gem "mailjet"
+gem "pundit"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.1"
 gem "rails-i18n"
@@ -25,15 +26,17 @@ gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "factory_girl_rails"
+  gem "rspec-rails"
   gem "sqlite3", "~> 1.4"
 end
 
 group :development do
-  gem 'capistrano', '3.17.1'
-  gem 'capistrano-rails'
-  gem 'capistrano-passenger'
-  gem 'capistrano-rbenv'
-  gem 'capistrano-bundler'
+  gem "capistrano", "3.17.1"
+  gem "capistrano-rails"
+  gem "capistrano-passenger"
+  gem "capistrano-rbenv"
+  gem "capistrano-bundler"
   gem "web-console"
 end
 
