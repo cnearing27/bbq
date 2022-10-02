@@ -63,6 +63,7 @@ ru:
   comments:
       comment:
         destroy_confirm: "Точно удалить этот комментарий?"
+      new: "Новый комментарий #{@event.title}"
 
   subscriptions:
     subscription:
@@ -97,6 +98,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      subject: "Новый комментарий @ %{title}"
     subscription:
       title: "Новая подписка"
       name: "Имя"
@@ -105,6 +107,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      subject: "Новая подписка на %{title}"
     photo:
       title: "Новая фотография"
       email: "Email"
@@ -112,6 +115,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      subject: "Новая фотография @ %{title}"
 
   event:
     pincode: "Код доступа"
