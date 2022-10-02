@@ -18,6 +18,7 @@ gem "pundit"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.1"
 gem "rails-i18n"
+gem "resque", "~>2.4"
 gem "rmagick"
 gem "sprockets-rails"
 gem "stimulus-rails"
@@ -36,6 +37,7 @@ group :development do
   gem "capistrano-rails"
   gem "capistrano-passenger"
   gem "capistrano-rbenv"
+  gem "capistrano-resque", require: false
   gem "capistrano-bundler"
   gem "web-console"
 end
