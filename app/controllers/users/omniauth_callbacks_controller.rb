@@ -14,7 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: service_name)
       sign_in_and_redirect @user, event: :authentication
     else
-      flash[:error] = I18n.t('desive.failed', kind: service_name)
+      flash[:error] = I18n.t('devise.omniauth_callbacks.failed', kind: service_name)
 
       redirect_to new_user_session_path
     end
