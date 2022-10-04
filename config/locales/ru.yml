@@ -127,7 +127,5 @@ ru:
     not_authorized: "Данное действие недоступно для Вас"
 
   buttons:
-    github_log_in: "Войти через GitHub"
+    oauth_sign_up: "Войти через %{provider}"
 
-  omniauth_callbacks:
-    fail_gh: "Не удалось выполнить вход"
