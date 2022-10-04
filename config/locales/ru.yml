@@ -126,3 +126,8 @@ ru:
   pundit:
     not_authorized: "Данное действие недоступно для Вас"
 
+  buttons:
+    github_log_in: "Войти через GitHub"
+
+  omniauth_callbacks:
+    fail_gh: "Не удалось выполнить вход"

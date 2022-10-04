@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable,
+    :omniauthable, omniauth_providers: [:github]
 
   mount_uploader :avatar, AvatarUploader
   
@@ -15,6 +16,23 @@ class User < ApplicationRecord
 
   def send_devise_notification(notification, *args)
     devise_mailer.send(notification, self, *args).deliver_later
+  end
+
+  def self.find_for_github_oauth(access_token)
+    email = access_token.info.email
+    name = access_token.info.name
+    user = where(email: email).first
+
+    return user if user.present?
+
+    provider = access_token.provider
+    uid = access_token.uid
+
+    where(url: uid, provider: provider).first_or_create! do |user|
+      user.email = email
+      user.name = name
+      user.password = Devise.friendly_token.first(16)
+    end
   end
 
   private
