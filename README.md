@@ -1,24 +1,82 @@
-# README
+# Шашлыки
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails приложение "Шашлыки".
 
-Things you may want to cover:
+Сайт, на котором пользователи могут задавать друг другу вопросы и отвечать на них. Создан по мотивам [Ask.fm](https://ask.fm/)
 
-* Ruby version
+Развернутое приложение - http://www.cnearing27-bbq.ru/
 
-* System dependencies
+## Используемые техноголии
 
-* Configuration
+- GoogleOauth2
+- GitHub Oauth
+- MailJet
+- YandexMap
 
-* Database creation
+## Предварительные требования
 
-* Database initialization
+```
+ruby 3.1.2
+Rails 7.0.4
+```
 
-* How to run the test suite
+Установите bundler
 
-* Services (job queues, cache servers, search engines, etc.)
+    gem install bundler
+    
+Создать OAuth App на GitHub, следуя [инструкии](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
 
-* Deployment instructions
+Получите учетные данные OAuth 2.0 от Google API Console по [инструкции](https://developers.google.com/identity/protocols/oauth2#basicsteps)
 
-* ...
+Зарегистрируйтесь на MailJet и добавьте свое приложение по [инструкции](https://dev.mailjet.com/email/guides/#authentication)
+
+Получите ключ от API Яндекс карт, [инструкция](https://nethouse.ru/about/instructions/kak_poluchit_apikey_dlya_kart_yandex#:~:text=%D0%9A%D0%B0%D0%BA%20%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C%20API%20Key%20%D0%B4%D0%BB%D1%8F%20%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81.%D0%9A%D0%B0%D1%80%D1%82%3F,-%D0%95%D1%81%D0%BB%D0%B8%20%D0%BD%D0%B0%20%D0%B2%D0%B0%D1%88%D0%B5%D0%BC)
+
+## Локальная установка
+
+Склонируйте репозиторий:
+
+    git@github.com:cnearing27/bbq.git
+
+Перейдите в корень проекта
+
+    cd bbq
+
+Установите необходимые гемы
+
+    bundle install --without production
+    
+Для **локального** запуска, переименуйте файл `config/database.yml.example` => `config/database.yml`
+
+В корне проекта создайте файл `.env`, заполните его по шаблону
+
+```
+MAILJET_API_KEY="Ваш ключ MailJet"
+MAILJET_SECRET_KEY="Ваш секретный ключ MailJet"
+MAILJET_SENDER="Email, от имени которого будет идти отправка почты"
+YANDEX_MAP_API_KEY="Ваш ключ API Яндекс карт"
+GITHUB_KEY="ID Вашего приложения на GitHub"
+GITHUB_SECRET="SECRET Вашего приложения на GitHub"
+GOOGLE_KEY="Ключ Вашего приложения Google OAuth2"
+GOOGLE_SECRET="SECRET Вашего приложения Google OAuth2"
+```
+    
+Создайте базу данных
+
+    bundle exec rails db:migrate
+    
+Запустите сервер (будет доступен по адресу localhost:1080)
+
+    bundle exec rails s
+    
+## Процесс использования
+
+Зарегистрируйтесь на сайте, нажав кнопку "Зарегистрироваться" вверху страницы правом верхнем углу, после этого будет выполнен вход на сайт с Вашей учетной записью.
+
+Вы можете установить пользовательский аватар, перейдя в раздел "Профиль", "Редактировать профиль"
+
+На главной странице сайта Вы можете создать событие, для этого укажите его название, место и время проведения. Также можете указать описание события и добавить пинкод, для того, чтобы ограничить возможность просмотра страницы события пользователями. Просматривать его смотгут только те, кому Вы сообщите пинкод.
+
+Пользователи, имеющие доступ к странице Вашего события, смогут подписаться на это событие, нажав кнопку "Подписаться", после чего эти пользователи отобразятся в разделе "Пойдут:", а также они будут получать email-рассылку по этому событию. В email-рассылку входят уведомления о новых фотографиях/комментариях на странице события, а также организатор события получает письма с уведомлением о новых подписчиках события.
+
+На странице события авторизованные пользователи смогут оставлять комментарии, обсуждая предстоящее/состоявшееся событие, а также добавлять фотографии с мероприятия.
